@@ -1,0 +1,23 @@
+# Replit configuration for C2B generated Discord Bot
+# This file enables one-click run on Replit (works on mobile!)
+
+run = "python main.py"
+entrypoint = "main.py"
+language = "python3"
+
+[nix]
+channel = "stable-24_05"
+
+[nix.packages]
+pkgs = ["python312", "pip"]
+
+[deployment]
+run = ["python", "main.py"]
+deploymentTarget = "gce"
+
+[env]
+PYTHONDONTWRITEBYTECODE = "1"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
